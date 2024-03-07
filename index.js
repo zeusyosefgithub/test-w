@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 
 app.post('/req', (req,res) => {
     console.log(req.body.id);
-    res.send('123    ' + req.body.id);
+    res.send('123');
 });
 
 const PORT = process.env.PORT || 5000; app.listen(PORT, () => {
