@@ -29,7 +29,7 @@ db.once("open", () => {
             args: ['--no-sandbox']
         },
     });
-    client.initialize();
+    //client.initialize();
 
     client.on('qr', (qr) => {
         console.log(qr);
