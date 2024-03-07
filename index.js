@@ -52,6 +52,10 @@ db.once("open", () => {
     });
 })
 
+app.get('/',(req,res) => {
+    res.send('welcome');
+});
+
 app.get('/api/get-qr-code', (req, res) => {
     if (qrCodeData) {
       res.status(200).json({ qrCode: qrCodeData });
