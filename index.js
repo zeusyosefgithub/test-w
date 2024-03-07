@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 
 const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.send("Express on Vercel");
 });
 
-app.post('/req',urlencodedParser, (req,res) => {
+app.post('/req', (req,res) => {
     console.log(req.body.id);
     res.send('123');
 });
