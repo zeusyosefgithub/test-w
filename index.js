@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 });
 
 app.post('/req', (req,res) => {
-    console.log(req.body.id);
+    console.log(req.body);
     res.send('123');
 });
 
