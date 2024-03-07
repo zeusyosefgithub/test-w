@@ -5,10 +5,8 @@ app.get("/", (req, res) => {
     res.send("Express on Vercel");
 });
 
-app.post('/req', function(req, res) {
-    console.log('receiving data ...');
-    console.log('body is ',req.body);
-    res.send(req.body);
+app.post('/req', (req,res) => {
+    res.send(req.body)
 });
 
 const PORT = process.env.PORT || 5000; app.listen(PORT, () => {
