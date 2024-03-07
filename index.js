@@ -5,7 +5,7 @@ app.get("/", (req, res) => {
     res.send("Express on Vercel");
 });
 
-app.post('/', function(req, res) {
+app.post('/req', function(req, res) {
     console.log('receiving data ...');
     console.log('body is ',req.body);
     res.send(req.body);
