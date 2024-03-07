@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.post('/req',urlencodedParser, (req,res) => {
-    console.log(req.body);
+    console.log(req.body.id);
     res.send('123');
 });
 
